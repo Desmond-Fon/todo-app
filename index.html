@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[url('/images/bg-mobile-light.jpg')] dark:bg-[url('/images/bg-mobile-dark.jpg')] bg-no-repeat bg-contain   bg-veryLightGrayLT dark:bg-veryDarkBlueDM"
+  >
+    <header class="px-5 py-10 flex justify-between items-center">
+      <h1 class="text-white text-2xl tracking-[7px] font-bold uppercase">
+        Todo
+      </h1>
+      <img src="images/icon-moon.svg" alt="" class="w-5" />
+    </header>
+
+    <main class="px-5">
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="Create a new todo..."
+        class="w-full h-12 rounded-md px-5 text-xs mb-4 shadow-md"
+      />
+
+      <div class="shadow-md">
+        <div class="bg-white rounded-md">
+          <ul>
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+            >
+              <span class="flex items-center"
+                ><span
+                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2 hidden"
+                >
+                  <img src="images/icon-check.svg" alt="" class="w-3"
+                /></span>
+                <span
+                  class="border p-1 rounded-full w-5 h-5 mr-2"
+                ></span>
+                Complete online javascript course </span
+              ><span
+                ><img src="images/icon-cross.svg" alt="" class="w-3"
+              /></span>
+            </li>
+            <hr />
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+            >
+              <span class="flex items-center"
+                ><span
+                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
+                  ><img src="images/icon-check.svg" alt="" class="w-3"
+                /></span>
+                Jug around the park 3x</span
+              ><span
+                ><img src="images/icon-cross.svg" alt="" class="w-3"
+              /></span>
+            </li>
+            <hr />
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+            >
+              <span class="flex items-center"
+                ><span
+                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
+                  ><img src="images/icon-check.svg" alt="" class="w-3"
+                /></span>
+                10 minutes meditation</span
+              ><span
+                ><img src="images/icon-cross.svg" alt="" class="w-3"
+              /></span>
+            </li>
+            <hr />
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+            >
+              <span class="flex items-center"
+                ><span
+                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
+                  ><img src="images/icon-check.svg" alt="" class="w-3"
+                /></span>
+                Read for one hour</span
+              ><span
+                ><img src="images/icon-cross.svg" alt="" class="w-3"
+              /></span>
+            </li>
+            <hr />
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+            >
+              <span class="flex items-center"
+                ><span
+                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
+                  ><img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 h-3 flex justify-center items-center"
+                /></span>
+                Complete Todo App on Frontend Mentor</span
+              ><span
+                ><img src="images/icon-cross.svg" alt="" class="w-3"
+              /></span>
+            </li>
+            <hr />
+          </ul>
+          <div
+            class="flex justify-between px-5 text-xs py-4 text-darkGrayishBlueLT"
+          >
+            <h2>5 items left</h2>
+            <h2>Clear Completed</h2>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="class= w-full h-12 rounded-md px-5 text-sm mt-4 flex justify-center items-center shadow-sm bg-white"
+      >
+        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+          All
+        </p>
+        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+          Active
+        </p>
+        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+          Completed
+        </p>
+      </div>
+    </main>
+
+    <div class="flex justify-center text-xs text-darkGrayishBlueLT my-10">
+      Drag and drop to reorder list
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
