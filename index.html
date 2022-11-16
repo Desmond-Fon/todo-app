@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,93 +27,182 @@
     </style>
   </head>
   <body
-    class="bg-[url('/images/bg-mobile-light.jpg')] dark:bg-[url('/images/bg-mobile-dark.jpg')] bg-no-repeat bg-contain   bg-veryLightGrayLT dark:bg-veryDarkBlueDM"
+    class="bg-[url('/images/bg-mobile-light.jpg')] dark:bg-[url('/images/bg-mobile-dark.jpg')] lg:bg-[url('/images/bg-desktop-light.jpg')] lg:dark:bg-[url('/images/bg-desktop-dark.jpg')] bg-no-repeat bg-contain bg-veryLightGrayLT dark:bg-veryDarkBlueDM"
   >
-    <header class="px-5 py-10 flex justify-between items-center">
+    <header class="px-5 py-10 flex justify-between items-center lg:px-96 lg:py-16">
       <h1 class="text-white text-2xl tracking-[7px] font-bold uppercase">
         Todo
       </h1>
-      <img src="images/icon-moon.svg" alt="" class="w-5" />
+      <div>
+        <img src="images/icon-moon.svg" alt="" class="w-5" id="moon-icon" />
+        <img src="images/icon-sun.svg" alt="" class="w-5" id="sun-icon" />
+      </div>
     </header>
 
-    <main class="px-5">
+    <main class="px-5 lg:px-96">
       <input
         type="text"
         name=""
-        id=""
+        id="input"
         placeholder="Create a new todo..."
-        class="w-full h-12 rounded-md px-5 text-xs mb-4 shadow-md"
+        class="w-full h-12 rounded-md px-5 text-xs mb-4 shadow-md dark:bg-veryDarkSaturatedBlueDM dark:text-lightGrayishBlueDM outline-none"
       />
 
       <div class="shadow-md">
-        <div class="bg-white rounded-md">
-          <ul>
+        <div
+          class="bg-white rounded-md dark:bg-veryDarkSaturatedBlueDM dark:shadow-lg"
+        >
+          <ul id="list">
+            <!-- <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+            >
+              <span class="flex items-center">
+                <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden tick" id="tick"
+                  />
+                </span>
+                <p>Complete online javascript course</p>
+              </span>
+              <span>
+                <img src="images/icon-cross.svg" alt="" class="w-3"/>
+              </span>
+            </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
             <li
-              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+            >
+              <span class="flex items-center">
+                <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden tick" id="tick"
+                  />
+                </span>
+                <p>Complete online javascript course</p>
+              </span>
+              <span>
+                <img src="images/icon-cross.svg" alt="" class="w-3"/>
+              </span>
+            </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+            >
+              <span class="flex items-center">
+                <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden" id="tick"
+                  />
+                </span>
+                <p>Complete online javascript course</p>
+              </span>
+              <span>
+                <img src="images/icon-cross.svg" alt="" class="w-3"/>
+              </span>
+            </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+            >
+              <span class="flex items-center">
+                <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden" id="tick"
+                  />
+                </span>
+                <p>Complete online javascript course</p>
+              </span>
+              <span>
+                <img src="images/icon-cross.svg" alt="" class="w-3"/>
+              </span>
+            </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+            >
+              <span class="flex items-center">
+                <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden" id="tick"
+                  />
+                </span>
+                <p>Complete online javascript course</p>
+              </span>
+              <span>
+                <img src="images/icon-cross.svg" alt="" class="w-3"/>
+              </span>
+            </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
+            <li
+            class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
+          >
+            <span class="flex items-center">
+              <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
+                <img
+                  src="images/icon-check.svg"
+                  alt=""
+                  class="w-3 hidden" id="tick"
+                />
+              </span>
+              <p>Complete online javascript course</p>
+            </span>
+            <span>
+              <img src="images/icon-cross.svg" alt="" class="w-3"/>
+            </span>
+          </li>
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
+
+            <li
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
             >
               <span class="flex items-center"
-                ><span
-                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2 hidden"
-                >
-                  <img src="images/icon-check.svg" alt="" class="w-3"
+                ><span class="border p-1 rounded-full w-5 h-5 mr-2 check" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden " id="tick"
                 /></span>
-                <span
-                  class="border p-1 rounded-full w-5 h-5 mr-2"
-                ></span>
                 Complete online javascript course </span
               ><span
                 ><img src="images/icon-cross.svg" alt="" class="w-3"
               /></span>
             </li>
-            <hr />
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
 
             <li
-              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
             >
               <span class="flex items-center"
-                ><span
-                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
-                  ><img src="images/icon-check.svg" alt="" class="w-3"
+                ><span class="border p-1 rounded-full w-5 h-5 mr-2 check" onclick="print()">
+                  <img
+                    src="images/icon-check.svg"
+                    alt=""
+                    class="w-3 hidden " id="tick"
                 /></span>
-                Jug around the park 3x</span
+                Complete online javascript course </span
               ><span
                 ><img src="images/icon-cross.svg" alt="" class="w-3"
               /></span>
             </li>
-            <hr />
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>
 
             <li
-              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
-            >
-              <span class="flex items-center"
-                ><span
-                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
-                  ><img src="images/icon-check.svg" alt="" class="w-3"
-                /></span>
-                10 minutes meditation</span
-              ><span
-                ><img src="images/icon-cross.svg" alt="" class="w-3"
-              /></span>
-            </li>
-            <hr />
-
-            <li
-              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
-            >
-              <span class="flex items-center"
-                ><span
-                  class="bg-gradient-to-b from-linearGradientFrom to-linearGradientTo p-1 rounded-full w-5 h-5 mr-2"
-                  ><img src="images/icon-check.svg" alt="" class="w-3"
-                /></span>
-                Read for one hour</span
-              ><span
-                ><img src="images/icon-cross.svg" alt="" class="w-3"
-              /></span>
-            </li>
-            <hr />
-
-            <li
-              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT"
+              class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM "
             >
               <span class="flex items-center"
                 ><span
@@ -128,29 +217,38 @@
                 ><img src="images/icon-cross.svg" alt="" class="w-3"
               /></span>
             </li>
-            <hr />
+            <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div> -->
           </ul>
           <div
             class="flex justify-between px-5 text-xs py-4 text-darkGrayishBlueLT"
           >
-            <h2>5 items left</h2>
-            <h2>Clear Completed</h2>
+            <button id="items-left">0 items left</button>
+            <button id="clear-completed">Clear Completed</button>
           </div>
         </div>
       </div>
 
       <div
-        class="class= w-full h-12 rounded-md px-5 text-sm mt-4 flex justify-center items-center shadow-sm bg-white"
+        class="class= w-full h-12 rounded-md px-5 text-sm mt-4 flex justify-center items-center shadow-sm bg-white dark:bg-veryDarkSaturatedBlueDM dark:shadow-lg"
       >
-        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+        <button
+          class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600 active:text-blue-600"
+          id="all"
+        >
           All
-        </p>
-        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+        </button>
+        <button
+          class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600 active:text-blue-600"
+          id="active"
+        >
           Active
-        </p>
-        <p class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600">
+        </button>
+        <button
+          class="px-3 font-bold text-darkGrayishBlueLT hover:text-blue-600 active:text-blue-600"
+          id="completed"
+        >
           Completed
-        </p>
+        </button>
       </div>
     </main>
 
@@ -162,5 +260,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+    <script src="script.js"></script>
   </body>
 </html>
