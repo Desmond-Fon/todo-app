@@ -69,24 +69,24 @@ elem.addEventListener("keypress", (event)=> {
       event.preventDefault();
       myTodo.push(elem.value);
       console.log(myTodo);
-      let listItems = '';
-      for(let i = 0; i <myTodo.length; i++) {
+      // let listItems = '';
+      // for(let i = 0; i <myTodo.length; i++) {
         
-        listItems += `<li
+        list.innerHTML += `<li
         class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM todo-item" draggable="true"
       >
         <span class="flex items-center">
           <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
           </span>
-          <p class="items">${myTodo[i]}</p>
+          <p class="items">${elem.value}</p>
         </span>
         <span>
-          <img src="images/icon-cross.svg" alt="" class="w-3 cross"/>
+          <img src="images/icon-cross.svg" alt="" class="w-3 cross" onclick="del()" />
         </span>
       </li>
       <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>`
-      }
-      list.innerHTML = listItems;
+      // }
+      // list.innerHTML = listItems;
       elem.value = '';
       itemsLeft.innerHTML = `${myTodo.length} items left`
       // console.log(document.getElementById('items').textContent);
@@ -108,14 +108,14 @@ Array.from(document.getElementsByClassName("check")).forEach(btn => {
     />`;
     btn.nextSibling.nextSibling.setAttribute("style","text-decoration: line-through; color: gray");
       completedArray.push(btn.nextSibling.nextSibling.textContent)
-      // console.log(completedArray);
+      console.log(completedArray);
     } else{
       btn.setAttribute("style", "background: none");
       btn.nextSibling.nextSibling.setAttribute("style","text-decoration: none; color: hsl(235 19% 35% / var(--tw-text-opacity));");
       btn.innerHTML = `<img
       src="images/icon-cross.svg" class="hidden">`;
       activeArray.push(btn.nextSibling.nextSibling.textContent);
-      // console.log(activeArray);
+      console.log(activeArray);
     }
   })
 })
@@ -126,7 +126,6 @@ Array.from(document.getElementsByClassName("check")).forEach(btn => {
 all.addEventListener("click", ()=> {
     let listItems = '';
     for(let i = 0; i <myTodo.length; i++) {
-      
       listItems += `<li
       class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM todo-item" draggable="true"
     >
@@ -148,7 +147,6 @@ all.addEventListener("click", ()=> {
 active.addEventListener('click', ()=> {
   let listItems = '';
       for(let i = 0; i <activeArray.length; i++) {
-        
         listItems += `<li
         class="flex justify-between py-4 px-5 text-xs items-center text-veryDarkGrayishBlueLT dark:text-lightGrayishBlueDM"
       >
@@ -221,3 +219,43 @@ addEventListener('drop', (e) => {
     return false;
   }
 });
+
+// const clearTodoItem = (todoItem) => {
+//   myTodo[+todoItem.querySelector('[type="hidden"]').value] = null;
+//   updateTotalItems(true);
+//   todoItem.remove();
+// };
+
+// addEventListener("click", (e) => {
+//   if (e.target.matches(".cross")) 
+//   myTodo.pop()
+//   // clearTodoItem(e.target.parentElement);
+//   // if (e.target.matches(".clear_completed")) {
+//   //   document.querySelectorAll(".todo-item").forEach((e) => {
+//   //     if (e.querySelector(".check") !== null) clearTodoItem(e);
+//   //   });
+//   // }
+// })
+
+// function del() {
+//   Array.from(document.getElementsByClassName("cross")).forEach(btn => {
+//     btn.addEventListener('click', (e) => {
+//       const targetElement = e.target;
+//       if (targetElement.matches(".check")){
+//        btn.myTodo.pop()
+//       }
+//     })
+//   })
+//   }
+
+  function del() {
+    Array.from(document.getElementsByClassName("cross")).forEach(btn => {
+      btn.addEventListener('click', (e) => {
+
+        const li = e.target.parentElement;
+        console.log(li);
+        li.parentNode.removeChild(li)
+        console.log(li.parentElement);
+      })
+    })
+      }
