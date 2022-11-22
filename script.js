@@ -81,7 +81,7 @@ elem.addEventListener("keypress", (event)=> {
           <p class="items">${elem.value}</p>
         </span>
         <span>
-          <img src="images/icon-cross.svg" alt="" class="w-3 cross" onclick="del()" />
+          <img src="dist/images/icon-cross.svg" alt="" class="w-3 cross" onclick="del()" />
         </span>
       </li>
       <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>`
@@ -102,7 +102,7 @@ Array.from(document.getElementsByClassName("check")).forEach(btn => {
       // console.log(btn.nextSibling.nextSibling);
       btn.setAttribute("style","background: linear-gradient(to bottom, hsl(192, 100%, 67%), hsl(280, 87%, 65%));", "color: hsl(234 39% 85% / var(--tw-text-opacity));")
       btn.innerHTML = `<img
-      src="images/icon-check.svg"
+      src="dist/images/icon-check.svg"
       alt=""
       class="w-3"
     />`;
@@ -113,7 +113,7 @@ Array.from(document.getElementsByClassName("check")).forEach(btn => {
       btn.setAttribute("style", "background: none");
       btn.nextSibling.nextSibling.setAttribute("style","text-decoration: none; color: hsl(235 19% 35% / var(--tw-text-opacity));");
       btn.innerHTML = `<img
-      src="images/icon-cross.svg" class="hidden">`;
+      src="dist/images/icon-cross.svg" class="hidden">`;
       activeArray.push(btn.nextSibling.nextSibling.textContent);
       console.log(activeArray);
     }
@@ -135,7 +135,7 @@ all.addEventListener("click", ()=> {
         <p class="items">${myTodo[i]}</p>
       </span>
       <span>
-        <img src="images/icon-cross.svg" alt="" class="w-3 cross"/>
+        <img src="dist/images/icon-cross.svg" alt="" class="w-3 cross"/>
       </span>
     </li>
     <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>`
@@ -153,7 +153,7 @@ active.addEventListener('click', ()=> {
         <span class="flex items-center">
           <span class="border p-1 rounded-full w-5 h-5 mr-2 check dark:border-gray-600" onclick="print()">
             <img
-              src="images/icon-check.svg"
+              src="dist/images/icon-check.svg"
               alt=""
               class="w-3 hidden tick" id="tick"
             />
@@ -161,7 +161,7 @@ active.addEventListener('click', ()=> {
           <p id="items">${activeArray[i]}</p>
         </span>
         <span>
-          <img src="images/icon-cross.svg" alt="" class="w-3"/>
+          <img src="dist/images/icon-cross.svg" alt="" class="w-3"/>
         </span>
       </li>
       <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>`
@@ -181,7 +181,7 @@ completed.addEventListener('click', ()=> {
           <p id="items">${completedArray[i]}</p>
         </span>
         <span>
-          <img src="images/icon-cross.svg" alt="" class="w-3 cross"/>
+          <img src="dist/images/icon-cross.svg" alt="" class="w-3 cross"/>
         </span>
       </li>
       <div class="w-full h-[1px] bg-gray-200 dark:bg-gray-600 "></div>`

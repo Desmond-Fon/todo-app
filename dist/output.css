@@ -605,8 +605,8 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/images\/bg-mobile-light\.jpg\'\)\] {
-  background-image: url('/images/bg-mobile-light.jpg');
+.bg-\[url\(\'\/dist\/images\/bg-mobile-light\.jpg\'\)\] {
+  background-image: url('/dist/images/bg-mobile-light.jpg');
 }
 
 .bg-gradient-to-b {
@@ -744,8 +744,8 @@ video {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-\[url\(\'\/images\/bg-mobile-dark\.jpg\'\)\] {
-  background-image: url('/images/bg-mobile-dark.jpg');
+.dark .dark\:bg-\[url\(\'\/dist\/images\/bg-mobile-dark\.jpg\'\)\] {
+  background-image: url('/dist/images/bg-mobile-dark.jpg');
 }
 
 .dark .dark\:text-lightGrayishBlueDM {
@@ -760,8 +760,8 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:bg-\[url\(\'\/images\/bg-desktop-light\.jpg\'\)\] {
-    background-image: url('/images/bg-desktop-light.jpg');
+  .lg\:bg-\[url\(\'\/dist\/images\/bg-desktop-light\.jpg\'\)\] {
+    background-image: url('/dist/images/bg-desktop-light.jpg');
   }
 
   .lg\:px-96 {
@@ -774,7 +774,7 @@ video {
     padding-bottom: 4rem;
   }
 
-  .dark .lg\:dark\:bg-\[url\(\'\/images\/bg-desktop-dark\.jpg\'\)\] {
-    background-image: url('/images/bg-desktop-dark.jpg');
+  .dark .lg\:dark\:bg-\[url\(\'\/dist\/images\/bg-desktop-dark\.jpg\'\)\] {
+    background-image: url('/dist/images/bg-desktop-dark.jpg');
   }
 }
